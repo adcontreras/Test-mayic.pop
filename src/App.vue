@@ -3,7 +3,7 @@
     <NavBar/>
   </div>
   <div>
-    <HomeMayic/>
+    <ShopMayic/>
   </div>
   <div>
     <FooterMayic/>
@@ -15,13 +15,14 @@
 
   import NavBar from './components/NavBar.vue';
   import FooterMayic from './components/FooterMayic.vue'
-  import HomeMayic from './components/HomeMayic.vue'
+  // import HomeMayic from './components/HomeMayic.vue'
+  import ShopMayic from './components/ShopMayic.vue'
 
   export default {
     name: 'App',
     components:{
     NavBar,
-    HomeMayic,
+    ShopMayic,
     FooterMayic  
 }
   }

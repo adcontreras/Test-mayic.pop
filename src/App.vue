@@ -1,20 +1,29 @@
 <template>
   <div>
-    <NavBar/>>
+    <NavBar/>
   </div>
-  <MiPrueba/>
+  <div>
+    <HomeMayic/>
+  </div>
+  <div>
+    <FooterMayic/>
+  </div>
+
 </template>
 
 <script>
-  import MiPrueba from './components/MiPrueba.vue';
+
   import NavBar from './components/NavBar.vue';
+  import FooterMayic from './components/FooterMayic.vue'
+  import HomeMayic from './components/HomeMayic.vue'
 
   export default {
     name: 'App',
     components:{
-      NavBar,
-      MiPrueba
-    }
+    NavBar,
+    HomeMayic,
+    FooterMayic  
+}
   }
 </script>
 

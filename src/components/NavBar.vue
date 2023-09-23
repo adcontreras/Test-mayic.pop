@@ -39,15 +39,17 @@ a{
 }
 
 .navbar{
-    margin-top:20px;
-    width: 90%;
+    /* margin-top:20px; */
+    width: 100%;
     display: flex;
     align-self: center;
     justify-content: space-between;
     margin:auto;
-    margin-top:20px;
-    border:solid black 2px;
+    /* margin-top:20px; */
+    /* border:solid black 2px; */
     padding: 10px;
+    background-color: rgb(250, 236, 236);
+
 
 }
 

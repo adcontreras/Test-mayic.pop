@@ -55,7 +55,7 @@ export default {
 }
 </script>
 
-<style>  
+<style scoped>  
 .container-1 {
     /* background-color: aquamarine; */
     /* background-image: url('https://static.vecteezy.com/system/resources/previews/023/181/176/large_2x/3d-illustration-of-halloween-table-with-food-and-glass-of-juice-ai-generative-image-free-photo.jpg'); */
@@ -89,9 +89,7 @@ export default {
 
 .product{
     width: 300px;
-    height: 350px;
-    /* background-color: blueviolet; */
-    /* flex: 0 0 calc(50% - 10px);  */
+    height: 390px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -139,16 +137,16 @@ export default {
 
   .comprar{
     display: flex;
-    width: 100px;
+    width: 80px;
     height: 35px;
     margin:auto;
-    /* background-color: #000000; */
-    border: 1px solid black;
+    border: 2px solid black;
     color:rgb(0, 0, 0);
     border-radius: 50px;
     margin-top:20px;
     margin-bottom:60px;
     justify-content: center;
+    cursor:pointer;
   }
 
   .comprar p{
@@ -172,6 +170,7 @@ export default {
     margin:auto;
     background-color: black;
     color:white;
+    cursor: pointer;
   }
 
 </style>

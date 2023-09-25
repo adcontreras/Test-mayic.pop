@@ -1,7 +1,7 @@
 <template>
     <div id="container">
         <nav class="navbar">
-            <ul class="nav-right-section">
+            <ul class="nav-logo-section">
                 <li class="logo-icon"><router-link to="/"><img src="../assets/Logo-MP-1.png" alt=""></router-link></li>   
                 <!-- <li class="notification-icon"></li> -->
             </ul>
@@ -20,8 +20,12 @@
             </ul>
 
             <ul class="nav-right-section">
+                <div class="search-input-container">
+                    <span class="search-icon"></span>
+                    <input type="text" value="Search" name="" id="">
+                </div>
                 <router-link to="/login"><li class="logIn-icon" tittle="login" ></li></router-link>
-                    <li class="search-icon" tittle="search"><a href="#"></a></li>
+                    <!-- <li class="search-icon" tittle="search"><a href="#"></a></li> -->
                     <li class="shop-icon" tittle="shop"><a href="#"></a></li>
             </ul>
         </nav>
@@ -89,6 +93,14 @@ export default {
     align-items: center;
     padding: 5px 20px 3px;
 }
+.nav-logo-section {
+  display: flex;
+  align-items: center; /* Centrar verticalmente los elementos */
+}
+
+.nav-logo-section .logo-icon {
+  margin-right: 10px; /* Agregar margen derecho para separar el logo de la siguiente sección */
+}
 
 .logo-icon{
     display: flex;
@@ -98,12 +110,48 @@ export default {
     display: flex;
     width: 35px;
 }
+div.search-input-container{
+    width: 300px;
+    height: 30px;
+    background-color: white;
+    height: auto;
+    display: flex;
+    border-radius: 100px;
+    align-items: center;
+    justify-content: center;
+    padding-left: 20px;
+    box-shadow: 0 1px 6px 0 #bed2f0;
+}
+
+input{
+    width: 300px;
+    height: 30px;
+    padding:15px;
+    border: none;
+    outline: none;
+    border-radius: 100px;
+}
+
+div.search-input-container:hover{
+    box-shadow: 0 1px 6px 0 #9b9ea3;
+    border-color: #dfe1e5;
+}
+div.search-input-container .search-icon{
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Vector_search_icon.svg/945px-Vector_search_icon.svg.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 20px;
+    height: 20px;
+}
+
 .nav-right-section{
     display: flex;
     align-items: center;
 }
 
 .nav-left-section{
+    margin-right: 400px;
     display: flex;
     align-items: center;
 }
@@ -174,7 +222,7 @@ nav .nav-left-section img{
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
     margin-top: 10px;
-    top:10%
+    top:5%
 }
 
 .dropdown-content a {

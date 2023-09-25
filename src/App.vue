@@ -8,9 +8,6 @@
 
 <script>
 import NavBar from './components/NavBar.vue';
-// import HomeMayic from './components/HomeMayic.vue';
-// import AboutMe from './components/AboutMe.vue';
-// import ShopMayic from './components/ShopMayic.vue';
 import FooterMayic from './components/FooterMayic.vue';
 
 export default {

@@ -9,13 +9,15 @@
                 <div class="precio-grande">$10</div>
                 <p class="description-grande">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
             </section>
+
             <section class="img-big-derecha">
                 <div class="foto-izq">
                     <div class="img-izq"></div>
                     <div class="texto">
                         <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                        <div class="precio">$10</div>
+                        <div class="precio">$10</div>    
                     </div>
+                    <div class="comprar"><button v-on:click="handleClick">Comprar</button></div>
                     
                 </div>
                 <div class="foto-derecha">
@@ -23,12 +25,14 @@
                     <div class="texto">
                         <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                         <div class="precio">$10</div>
+                        
                     </div>
+                    <div class="comprar"><button v-on:click="handleClick">Comprar</button></div>
                 </div>
                 <div class="illustration"></div>
             </section>
         </div>
-        <div class="b-2"><button v-on:click="handleClick">SHOP NOW</button></div>  
+        <div class="b-2"><button v-on:click="handleClick">SHOP A GIFT</button></div>  
     </div>
 </template>
 
@@ -224,10 +228,43 @@ export default {
     font-weight: bold; 
   }
 
-/* .foto-derecha{
-    width: 50%;
-    height: 50%; 
-} */
+  .comprar{
+    display: flex;
+    width: 100px;
+    height: 35px;
+    margin:auto;
+    /* background-color: #000000; */
+    border: 1px solid black;
+    color:rgb(0, 0, 0);
+    border-radius: 50px;
+    margin-top:20px;
+    margin-bottom:60px;
+    justify-content: center;
+    cursor:pointer;
+  }
+
+  .comprar{
+    display: flex;
+    width: 100px;
+    height: 30px;
+    margin:auto;
+    background-color: #000000;
+    border: 0;
+    border-radius: 50px;
+    margin-top:20px;
+    margin-bottom:60px;
+    cursor:pointer;
+
+  }
+
+  .comprar button{
+    border:none;
+    margin:auto;
+    background-color: black;
+    color:white;
+    cursor:pointer;
+
+  }
 
 .illustration{
     /* width: 50%; */

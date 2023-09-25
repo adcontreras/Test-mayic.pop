@@ -5,60 +5,104 @@
         </div>
         <h3 class="tittle">SHOP</h3>
         <div class="products">  
-            <section class="product">
+            <section class="product" style="display: none;">
                 <div class="img-der"></div>
                 <div class="texto">
                     <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                     <div class="precio">$10</div>
                 </div>
-                <div class="comprar"><p>Comprar</p></div>
-            </section>
-
-            <section class="product">
-                <div class="img-der"></div>
-                <div class="texto">
-                    <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                    <div class="precio">$10</div>
-                </div>
-                <div class="comprar"><p>Comprar</p></div>
-
-            </section>
-
-            <section class="product">
-                <div class="img-der"></div>
-                <div class="texto">
-                    <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                    <div class="precio">$10</div>
-                </div>
-                <div class="comprar"><p>Comprar</p></div>
-            </section>
-
-            <section class="product">
-                <div class="img-der"></div>
-                <div class="texto">
-                    <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                    <div class="precio">$10</div>
-                </div>
-                <div class="comprar"><p>Comprar</p></div>
-            </section>  
+                <div class="bt-comprar"><router-link to="/"><button>Comprar</button></router-link>
+  </div>            </section>
         </div>
-        <div class="b-2"><button>MORE</button></div>
+        <div class="bt-more"><button>MORE</button></div>
     </div>
 </template>
 
 <script>
+// import { useRouter } from 'vue-router';
+
 export default {
-    name: 'ShopMayic',
-    props: {
-        msg:String
+  name: 'ShopMayic',
+  props: {
+    msg: String
+  },
+ 
+
+    mounted() {
+        const productsData = [
+    {
+        imageUrl: 'https://i.pinimg.com/564x/73/03/f1/7303f1723e2a6ab283a27032bda1ead7.jpg',
+        description: 'Paleta de chocolate amargo y relleno de vainilla',
+        price: '$10'
+    },
+    {
+        imageUrl: 'https://i.pinimg.com/564x/73/03/f1/7303f1723e2a6ab283a27032bda1ead7.jpg',
+        description: 'Paleta de chocolate amargo y relleno de oreo',
+        price: '$15'
+    },
+    {
+        imageUrl: 'https://i.pinimg.com/564x/73/03/f1/7303f1723e2a6ab283a27032bda1ead7.jpg',
+        description: 'Paleta de chocolate blanco y relleno de vainilla',
+        price: '$10'
+    },
+    {
+        imageUrl: 'https://i.pinimg.com/564x/73/03/f1/7303f1723e2a6ab283a27032bda1ead7.jpg',
+        description: 'Paleta de chocolate blanco y relleno de oreo',
+        price: '$15'
+    },
+    {
+        imageUrl: 'https://i.pinimg.com/564x/73/03/f1/7303f1723e2a6ab283a27032bda1ead7.jpg',
+        description: 'Paleta de chocolate amargo y relleno de vainilla',
+        price: '$10'
+    },
+    {
+        imageUrl: 'https://i.pinimg.com/564x/73/03/f1/7303f1723e2a6ab283a27032bda1ead7.jpg',
+        description: 'Paleta de chocolate amargo y relleno de oreo',
+        price: '$15'
+    },
+    {
+        imageUrl: 'https://i.pinimg.com/564x/73/03/f1/7303f1723e2a6ab283a27032bda1ead7.jpg',
+        description: 'Paleta de chocolate blanco y relleno de vainilla',
+        price: '$10'
+    },
+    {
+        imageUrl: 'https://i.pinimg.com/564x/73/03/f1/7303f1723e2a6ab283a27032bda1ead7.jpg',
+        description: 'Paleta de chocolate blanco y relleno de oreo',
+        price: '$15'
+    },
+
+];
+
+
+const productTemplate = document.querySelector('.product');
+    const productsContainer = document.querySelector('.products');
+
+    function addProductsToContainer() {
+      productsData.forEach((product) => {
+        const productClone = productTemplate.cloneNode(true);
+        productClone.style.display = 'block'; // Muestra el producto clonado
+
+        const imgDiv = productClone.querySelector('.img-der');
+        imgDiv.style.backgroundImage = `url('${product.imageUrl}')`;
+
+        const description = productClone.querySelector('.description');
+        description.textContent = product.description;
+
+        const precio = productClone.querySelector('.precio');
+        precio.textContent = product.price;
+
+        productsContainer.appendChild(productClone);
+      });
     }
-}
+
+    addProductsToContainer();
+
+    }
+};
 </script>
 
 <style scoped>  
 .container-1 {
-    /* background-color: aquamarine; */
-    /* background-image: url('https://static.vecteezy.com/system/resources/previews/023/181/176/large_2x/3d-illustration-of-halloween-table-with-food-and-glass-of-juice-ai-generative-image-free-photo.jpg'); */
     background-image: url('https://image.slidesdocs.com/responsive-images/background/pastel-colored-with-3d-rendered-pumpkin-and-candles-powerpoint-background_079e05830a__960_540.jpg');
     background-size: cover; 
     background-repeat: no-repeat; 
@@ -80,22 +124,24 @@ export default {
 }
 
 .products{
-    width: 100%;
-    height: 500px;
-    margin:auto;
+    width: 90%;
+    height: auto; 
+    margin: auto;
     display: flex;
-    padding:40px;
+    flex-wrap: wrap; 
+    justify-content: space-between; 
 }
 
 .product{
-    width: 300px;
-    height: 390px;
+    width: 25%;
+    height: 350px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    margin:auto;
-    padding-right: 30px;
-    padding-left: 30px;
+    justify-content: center;
+    margin-top:30px;
+    margin-bottom: 30px; 
+    padding-right: 10px;
+    padding-left: 10px;
 }
 
 .img-der{
@@ -106,21 +152,22 @@ export default {
     background-repeat: no-repeat; 
     background-position: center; 
     display:flex;
+    border-radius: 10px;
 }
 
 .texto{
-    /* width: 200px; */
-    height: 42px;
     display:flex;
     align-items: flex-end;
+    margin-top: 10px;
 
 }
 
 .texto p{
-    width: 85%;
-    font-size: 12px;
+    width: 80%;
+    font-size: 14px;
     margin: 0; 
     display:flex;
+    margin-right: 15px;
 }
 
 .precio {
@@ -135,12 +182,12 @@ export default {
     font-weight: bold; 
   }
 
-  .comprar{
+  .bt-comprar{
     display: flex;
-    width: 80px;
-    height: 35px;
+    width: 100px;
+    /* height: 35px; */
     margin:auto;
-    border: 2px solid black;
+    border: 1px solid black;
     color:rgb(0, 0, 0);
     border-radius: 50px;
     margin-top:20px;
@@ -149,11 +196,20 @@ export default {
     cursor:pointer;
   }
 
-  .comprar p{
+  .bt-comprar p{
     margin:auto;
   }
 
-  .b-2{
+  .bt-comprar button{
+    border:none;
+    margin:auto;
+    background-color: white;
+    color:black;
+    cursor: pointer;
+
+  }
+
+  .bt-more{
     display: flex;
     width: 150px;
     height: 30px;
@@ -163,9 +219,9 @@ export default {
     border-radius: 50px;
     margin-top:20px;
     margin-bottom:60px;
-  }
 
-  .b-2 button{
+  }
+    .bt-more button{
     border:none;
     margin:auto;
     background-color: black;

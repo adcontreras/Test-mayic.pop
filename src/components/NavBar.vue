@@ -111,7 +111,7 @@ export default {
 .nav-left-section li{
     list-style-type:none;
     padding: 0;
-    font-size: 13px;
+    font-size: 18px;
 }
 
 .nav-link a{
@@ -163,18 +163,18 @@ nav .nav-left-section img{
 .dropdown {
     position: relative;
     display: inline-block;
-    /* margin-top: 40px; */
+    margin-top: 40px;
 }
 
 .dropdown-content {
     display: none;
     position: absolute;
     background-color: #f9f9f9;
-    min-width: 250px;
+    min-width: 350px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
     margin-top: 10px;
-    top:5%
+    top:10%
 }
 
 .dropdown-content a {

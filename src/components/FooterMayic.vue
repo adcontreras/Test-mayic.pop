@@ -2,9 +2,9 @@
 <div class="footer">
         <p class="love-message">We would love to hear from you</p>
         <ul class="social-media">
-            <li class="social-facebook" ><a href="#"></a></li>
-            <li class="social-instagram"><a href="#"></a></li>
-            <li class="social-pinterest" ><a href="#"></a></li>
+            <li class="social-facebook"><a href="https://www.facebook.com/tu-pagina-de-facebook" target="_blank"></a></li>
+            <li class="social-instagram"><a href="https://www.instagram.com/tu-perfil-de-instagram" target="_blank"></a></li>
+            <li class="social-pinterest"><a href="https://www.pinterest.com/tu-perfil-de-pinterest" target="_blank"></a></li>
         </ul>
         <div class="copy-rights">
             <p>Derechos reservados a Magic.pop 2023</p>

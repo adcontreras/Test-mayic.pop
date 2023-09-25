@@ -32,7 +32,7 @@
                 </div>
                 <router-link to="/login"><li class="logIn-icon" tittle="login" ></li></router-link>
                     <!-- <li class="search-icon" tittle="search"><a href="#"></a></li> -->
-                    <li class="shop-icon" tittle="shop"><a href="#"></a></li>
+                <router-link to="/cart"><li class="shop-icon" tittle="shop"></li></router-link>
             </ul>
         </nav>
     </div>

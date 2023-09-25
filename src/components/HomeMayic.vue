@@ -62,7 +62,7 @@ export default {
 
 <style scoped>
   .container-1 {
-    background-image: url('https://inspgr.id/app/uploads/2020/03/3D-uv-05.jpg');
+    background-image: url('../assets/fondo.png');
     background-size: cover; 
     background-repeat: no-repeat; 
     background-position: center; 

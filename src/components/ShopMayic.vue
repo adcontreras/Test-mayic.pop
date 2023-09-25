@@ -5,7 +5,9 @@
         </div>
         <h3 class="tittle">SHOP</h3>
         <div class="products">  
-            <section class="product" style="display: none;">
+            <!-- <section class="product" style="display: none;"> -->
+                <section class="product" v-for="(product, index) in filteredProducts" :key="index">
+
                 <div class="img-der"></div>
                 <div class="texto">
                     <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
@@ -18,15 +20,156 @@
     </div>
 </template>
 
-<script>
-// import { useRouter } from 'vue-router';
 
+  
+  <!-- <script>
+  export default {
+    name: 'ShopMayic',
+    props: {
+      msg: String
+    },
+    data() {
+      return {
+        searchText: '',
+        productsData: [
+          // ... tu arreglo de productos ...
+        ],
+        filteredProducts: [],
+      };
+    },
+    created() {
+      // Escuchar el evento de búsqueda
+      this.$bus.on('perform-search', (searchText) => {
+        this.searchText = searchText;
+        this.filterProducts();
+      });
+    },
+    methods: {
+      filterProducts() {
+        const searchText = this.searchText.toLowerCase();
+        this.filteredProducts = this.productsData.filter((product) =>
+          product.description.toLowerCase().includes(searchText)
+        );
+      },
+    },
+  
+    mounted() {
+      // Carga inicial de productos
+      this.filterProducts();
+    },
+  };
+  </script> -->
+  
+  <script>
 export default {
   name: 'ShopMayic',
   props: {
     msg: String
   },
- 
+  data() {
+    return {
+      searchText: '',
+      productsData: [
+        {
+          imageUrl: 'https://i.pinimg.com/564x/73/03/f1/7303f1723e2a6ab283a27032bda1ead7.jpg',
+          description: 'Paleta de chocolate amargo y relleno de vainilla',
+          price: '$10'
+        },
+        {
+          imageUrl: 'https://i.pinimg.com/564x/73/03/f1/7303f1723e2a6ab283a27032bda1ead7.jpg',
+          description: 'Paleta de chocolate amargo y relleno de vainilla',
+          price: '$10'
+        },
+        {
+          imageUrl: 'https://i.pinimg.com/564x/73/03/f1/7303f1723e2a6ab283a27032bda1ead7.jpg',
+          description: 'Paleta de chocolate amargo y relleno de vainilla',
+          price: '$10'
+        },
+        {
+          imageUrl: 'https://i.pinimg.com/564x/73/03/f1/7303f1723e2a6ab283a27032bda1ead7.jpg',
+          description: 'Paleta de chocolate amargo y relleno de vainilla',
+          price: '$10'
+        },
+        {
+          imageUrl: 'https://i.pinimg.com/564x/73/03/f1/7303f1723e2a6ab283a27032bda1ead7.jpg',
+          description: 'Paleta de chocolate amargo y relleno de vainilla',
+          price: '$10'
+        },
+        {
+          imageUrl: 'https://i.pinimg.com/564x/73/03/f1/7303f1723e2a6ab283a27032bda1ead7.jpg',
+          description: 'Paleta de chocolate amargo y relleno de vainilla',
+          price: '$10'
+        },
+        {
+          imageUrl: 'https://i.pinimg.com/564x/73/03/f1/7303f1723e2a6ab283a27032bda1ead7.jpg',
+          description: 'Paleta de chocolate amargo y relleno de vainilla',
+          price: '$10'
+        },
+        {
+          imageUrl: 'https://i.pinimg.com/564x/73/03/f1/7303f1723e2a6ab283a27032bda1ead7.jpg',
+          description: 'Paleta de chocolate amargo y relleno de vainilla',
+          price: '$10'
+        }
+        // ... otros productos ...
+      ],
+      filteredProducts: [],
+    };
+  },
+  created() {
+    // Escuchar el evento de búsqueda
+    this.$bus.on('perform-search', (searchText) => {
+      this.searchText = searchText;
+      this.filterProducts();
+    });
+  },
+  methods: {
+    filterProducts() {
+      const searchText = this.searchText.toLowerCase();
+      this.filteredProducts = this.productsData.filter((product) =>
+        product.description.toLowerCase().includes(searchText)
+      );
+    },
+  },
+  mounted() {
+    // Realiza la inicialización de productos aquí o llamando a una función si lo prefieres
+    this.filterProducts();
+  },
+};
+</script>
+
+
+
+<!-- este es el original 
+<script>
+export default {
+    name: 'ShopMayic',
+  props: {
+    msg: String
+  },
+  data() {
+    return {
+      searchText: '',
+      productsData: [
+        // ... tu arreglo de productos ...
+      ],
+      filteredProducts: [],
+    };
+  },
+  created() {
+    // Escuchar el evento de búsqueda
+    this.$bus.on('perform-search', (searchText) => {
+      this.searchText = searchText;
+      this.filterProducts();
+    });
+  },
+  methods: {
+    filterProducts() {
+      const searchText = this.searchText.toLowerCase();
+      this.filteredProducts = this.productsData.filter((product) =>
+        product.description.toLowerCase().includes(searchText)
+      );
+    },
+  },
 
     mounted() {
         const productsData = [
@@ -99,7 +242,7 @@ const productTemplate = document.querySelector('.product');
 
     }
 };
-</script>
+</script> -->
 
 <style scoped>  
 .container-1 {

@@ -22,7 +22,13 @@
             <ul class="nav-right-section">
                 <div class="search-input-container">
                     <span class="search-icon"></span>
-                    <input type="text" value="Search" name="" id="">
+                    <!-- <input type="text" value="Search" name="" id=""> -->
+                    <input
+      v-model="searchText"
+      type="text"
+      placeholder="Search"
+      @keydown.enter="performSearch"
+    />
                 </div>
                 <router-link to="/login"><li class="logIn-icon" tittle="login" ></li></router-link>
                     <!-- <li class="search-icon" tittle="search"><a href="#"></a></li> -->
@@ -36,30 +42,60 @@
 
 export default {
     name: 'NavBar',
+    data() {
+    return {
+      searchText: '',
+    };},
     methods: {
-        toggleShopDropdown() {
-            const shopDropdown = this.$refs.shopDropdown;
-            if (shopDropdown.style.display === "none" || shopDropdown.style.display === "") {
-                shopDropdown.style.display = "block";
-            }
-            else {
-                shopDropdown.style.display = "none";
-            }
-        },
-        closeShopDropdown(event) {
-            const shopButton = document.getElementById("shopButton");
-            const shopDropdown = document.getElementById("shopDropdown");
-            if (event.target !== shopButton && event.target !== shopDropdown) {
-                shopDropdown.style.display = "none";
-            }
-        },
-    },
+  performSearch() {
+    // Emitir el evento de búsqueda cuando se presiona Enter
+    this.$bus.emit('perform-search', this.searchText);
+  },
+  toggleShopDropdown() {
+    const shopDropdown = this.$refs.shopDropdown;
+    if (shopDropdown.style.display === "none" || shopDropdown.style.display === "") {
+      shopDropdown.style.display = "block";
+    } else {
+      shopDropdown.style.display = "none";
+    }
+  },
+  closeShopDropdown(event) {
+    const shopButton = document.getElementById("shopButton");
+    const shopDropdown = document.getElementById("shopDropdown");
+    if (event.target !== shopButton && event.target !== shopDropdown) {
+      shopDropdown.style.display = "none";
+    }
+  },
+},}
+//     methods:
+//     performSearch() {
+//       // Emitir el evento de búsqueda cuando se presiona Enter
+//       this.$bus.emit('perform-search', this.searchText);
+//     },
+//     {
+//         toggleShopDropdown() {
+//             const shopDropdown = this.$refs.shopDropdown;
+//             if (shopDropdown.style.display === "none" || shopDropdown.style.display === "") {
+//                 shopDropdown.style.display = "block";
+//             }
+//             else {
+//                 shopDropdown.style.display = "none";
+//             }
+//         },
+//         closeShopDropdown(event) {
+//             const shopButton = document.getElementById("shopButton");
+//             const shopDropdown = document.getElementById("shopDropdown");
+//             if (event.target !== shopButton && event.target !== shopDropdown) {
+//                 shopDropdown.style.display = "none";
+//             }
+//         },
+//     },
    
-    beforeUnmount() {
-        document.removeEventListener("click", this.closeShopDropdown);
-    },
+//     beforeUnmount() {
+//         document.removeEventListener("click", this.closeShopDropdown);
+//     },
 
-};
+// };
 </script>
 
 

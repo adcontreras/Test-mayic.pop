@@ -167,8 +167,6 @@ export default {
 }
 
 .img-izq{
-    /* width: 100%;
-    height: 50%; */
     width: 100%;
     height: 300px;
     background-image:url('https://i.pinimg.com/564x/73/03/f1/7303f1723e2a6ab283a27032bda1ead7.jpg');
@@ -178,8 +176,6 @@ export default {
 }
 
 .img-der{
-    /* width: 100%;
-    height: 50%; */
     width: 100%;
     height: 300px;
     background-color: blanchedalmond;
@@ -190,10 +186,6 @@ export default {
 }
 
 .foto-derecha{
-    /* width: 50%;
-    height: 50%; */
-    /* width: 100%;
-    height: 300px; */
     flex: 0 0 calc(50% - 10px); 
     display: flex;
     flex-direction: column;
@@ -201,8 +193,6 @@ export default {
 }
 
 .texto{
-    /* width: 100%;
-    height: 10%; */
     font-size: 10px;
     display: flex; 
     align-items: flex-end; 
@@ -233,7 +223,6 @@ export default {
     width: 100px;
     height: 35px;
     margin:auto;
-    /* background-color: #000000; */
     border: 1px solid black;
     color:rgb(0, 0, 0);
     border-radius: 50px;
@@ -267,7 +256,6 @@ export default {
   }
 
 .illustration{
-    /* width: 50%; */
     height: 400px;
     flex: 1 0 100%;
     margin-top:-40px;
@@ -275,8 +263,6 @@ export default {
     background-size: cover; 
     background-repeat: no-repeat; 
     background-position: center; 
-    /* width: 100%;
-    height: 500px;  */
     display: flex;
     flex-direction: column;
     justify-content: space-between; 

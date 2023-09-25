@@ -33,8 +33,6 @@ export default {
     width: 40%;
     height: 60%;
     margin:auto;
-    /* max-width: 400px; 
-    margin: 0 auto;  */
     padding: 20px; 
     text-align: center; 
     border-radius: 30px;

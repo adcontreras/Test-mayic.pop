@@ -3,7 +3,6 @@
         <nav class="navbar">
             <ul class="nav-logo-section">
                 <li class="logo-icon"><router-link to="/"><img src="../assets/Logo-MP-1.png" alt=""></router-link></li>   
-                <!-- <li class="notification-icon"></li> -->
             </ul>
 
             <ul class="nav-left-section">
@@ -22,7 +21,6 @@
             <ul class="nav-right-section">
                 <div class="search-input-container">
                     <span class="search-icon"></span>
-                    <!-- <input type="text" value="Search" name="" id=""> -->
                     <input
       v-model="searchText"
       type="text"
@@ -31,7 +29,6 @@
     />
                 </div>
                 <router-link to="/login"><li class="logIn-icon" tittle="login" ></li></router-link>
-                    <!-- <li class="search-icon" tittle="search"><a href="#"></a></li> -->
                 <router-link to="/cart"><li class="shop-icon" tittle="shop"></li></router-link>
             </ul>
         </nav>
@@ -67,35 +64,7 @@ export default {
     }
   },
 },}
-//     methods:
-//     performSearch() {
-//       // Emitir el evento de búsqueda cuando se presiona Enter
-//       this.$bus.emit('perform-search', this.searchText);
-//     },
-//     {
-//         toggleShopDropdown() {
-//             const shopDropdown = this.$refs.shopDropdown;
-//             if (shopDropdown.style.display === "none" || shopDropdown.style.display === "") {
-//                 shopDropdown.style.display = "block";
-//             }
-//             else {
-//                 shopDropdown.style.display = "none";
-//             }
-//         },
-//         closeShopDropdown(event) {
-//             const shopButton = document.getElementById("shopButton");
-//             const shopDropdown = document.getElementById("shopDropdown");
-//             if (event.target !== shopButton && event.target !== shopDropdown) {
-//                 shopDropdown.style.display = "none";
-//             }
-//         },
-//     },
-   
-//     beforeUnmount() {
-//         document.removeEventListener("click", this.closeShopDropdown);
-//     },
 
-// };
 </script>
 
 
@@ -131,13 +100,12 @@ export default {
 }
 .nav-logo-section {
   display: flex;
-  align-items: center; /* Centrar verticalmente los elementos */
+  align-items: center;
 }
 
 .nav-logo-section .logo-icon {
-  margin-right: 10px; /* Agregar margen derecho para separar el logo de la siguiente sección */
+  margin-right: 10px; 
 }
-
 .logo-icon{
     display: flex;
     height: 40px;
@@ -243,7 +211,7 @@ nav .nav-left-section img{
         font-size: 18px;
         }
 
-/* Estilos para el menú desplegable */
+/* menú desplegable */
 .dropdown {
     position: relative;
     display: inline-block;

@@ -193,7 +193,6 @@ const productTemplate = document.querySelector('.product');
   .bt-comprar{
     display: flex;
     width: 100px;
-    /* height: 35px; */
     margin:auto;
     border: 1px solid black;
     color:rgb(0, 0, 0);

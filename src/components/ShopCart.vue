@@ -198,7 +198,6 @@ input[type="email"] {
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
-    /* margin:2px; */
     display:flex;
 }
 
@@ -222,7 +221,6 @@ input[type="email"] {
 .cost-unity{
     width: 30%;
     height: 150px;
-    /* background-color: rgb(94, 203, 149); */
 }
 
 .precio{
